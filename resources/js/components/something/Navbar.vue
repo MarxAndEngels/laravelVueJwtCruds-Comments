@@ -2,7 +2,7 @@
     <div>
        <div class='vnav' :class='{active: isNavbar}'>
            <div class='vnav-burg' @click='togglNavbar' :class='{active: isNavbar}'> <span>It'sMyPortfolio :3</span><i class="fa fa-bars"></i></div>
-            w312321
+            
              <div class='vnav-opt' :class='{active: isNavbar}'>
                  <div><router-link v-if='!token' :to="{ name: 'user.login' }" ><i class="fa fa-sign-in" aria-hidden="true"></i> <span>Войти</span></router-link></div>
                  <div><router-link v-if='!token' :to="{ name: 'user.registr' }" ><i class="fa fa-address-card-o" aria-hidden="true"></i> <span>Регистрация </span></router-link></div>
@@ -12,8 +12,8 @@
                  <div> <router-link :to="{ name: 'comments.index' }" ><i class="fa fa-comments" aria-hidden="true"></i><span> Comments</span></router-link> </div>
                  <div> <router-link :to="{ name: 'response.index' }" > <i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Send offer</span> </router-link></div>
                  <div> <router-link :to="{ name: 'code.js.index' }" > <i class="fa fa-code" aria-hidden="true"></i> <span>Code</span> </router-link></div>
-               <div > <router-link :to="{ name: 'admin.create' }" > <i class="fa fa-address-book-o"></i>  <span> Admin Create </span> </router-link> </div>
-               <div > <router-link :to="{ name: 'admin.index' }" > <i class="fa fa-address-book-o"></i>  <span> Admin Index </span> </router-link> </div>
+               <div v-if='admin'> <router-link :to="{ name: 'admin.create' }" > <i class="fa fa-address-book-o"></i>  <span> Admin Create </span> </router-link> </div>
+               <div v-if='admin'> <router-link :to="{ name: 'admin.index' }" > <i class="fa fa-address-book-o"></i>  <span> Admin Index </span> </router-link> </div>
                 <div v-if='token'><a @click.prevent='logout' ><i class="fa fa-sign-out" aria-hidden="true"></i><span> Выйти</span></a></div>
                  <div> <a href="https://t.me/qwerty_maks" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i> <span>Мой телеграм</span></a></div>
              </div>
