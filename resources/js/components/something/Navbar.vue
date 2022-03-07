@@ -2,7 +2,7 @@
     <div>
        <div class='vnav' :class='{active: isNavbar}'>
            <div class='vnav-burg' @click='togglNavbar' :class='{active: isNavbar}'> <span>It'sMyPortfolio :3</span><i class="fa fa-bars"></i></div>
-            
+            w312321
              <div class='vnav-opt' :class='{active: isNavbar}'>
                  <div><router-link v-if='!token' :to="{ name: 'user.login' }" ><i class="fa fa-sign-in" aria-hidden="true"></i> <span>Войти</span></router-link></div>
                  <div><router-link v-if='!token' :to="{ name: 'user.registr' }" ><i class="fa fa-address-card-o" aria-hidden="true"></i> <span>Регистрация </span></router-link></div>
