@@ -29,11 +29,11 @@ Route::group(['middleware' => 'api','prefix' => 'auth'], function ($router) {
             Route::get('/','IndexController');
         });
         
-        Route::group(['namespace'=>'Categories','prefix'=>'categories', 'middleware'=>'admin'], function(){
+        Route::group(['namespace'=>'Categories','prefix'=>'categories'], function(){
             Route::get('/','IndexController');
         });
 
-        Route::group(['namespace'=>'Skills','prefix'=>'skills', 'middleware'=>'admin'], function(){
+        Route::group(['namespace'=>'Skills','prefix'=>'skills'], function(){
             Route::post('/index','IndexController');
             Route::post('/','StoreController');
             Route::get('/{id}','ShowController');
