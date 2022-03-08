@@ -1,1 +1,1 @@
-<h1 align="center">Мае портфолио</h1>
+<h1 align="center">Портфолио</h1>
